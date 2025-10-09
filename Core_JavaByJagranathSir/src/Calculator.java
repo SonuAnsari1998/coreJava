@@ -1,6 +1,6 @@
 
 import java.util.Scanner;
-//asdfghjkl asdf
+
 class Employee{
     String name;
     double salary;
