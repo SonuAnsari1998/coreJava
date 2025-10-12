@@ -1,4 +1,4 @@
-package Test_Sep_27;
+package Exam_27_Sep;
 /*Question 2: Identifiers and Literals IdentifiersLiterals
 Write a Java program that declares variables using valid identifiers and different types of literals (integer, 
 float, character, string, and boolean). Print all the values.

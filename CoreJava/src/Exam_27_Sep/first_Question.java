@@ -1,4 +1,4 @@
-package Test_Sep_27;
+package Exam_27_Sep;
 /*Question 1: Command Line Arguments
 Write a Java program that takes three integers as command line arguments and prints their sum and average.*/
 public class first_Question {
