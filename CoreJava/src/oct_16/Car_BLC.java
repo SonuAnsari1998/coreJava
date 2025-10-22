@@ -44,4 +44,19 @@ Enter Car Price :-1000000
 Price must be positive integer
 
 ========================================================================*/
-
+public class Car_BLC{
+   	private String model;  
+	private int year; 
+	private double price;
+	public Car_BLC(String model, int year, double price) {
+		super();
+		this.model = model;
+		this.year = year;
+		this.price = price;
+	}
+	@Override
+	public String toString() {
+		return "Car_BLC [model=" + model + ", year=" + year + ", price=" + price + "]";
+	}
+	
+}
