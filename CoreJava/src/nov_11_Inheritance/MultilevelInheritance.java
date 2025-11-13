@@ -8,15 +8,15 @@ public class MultilevelInheritance {
        int choice=sc.nextInt();
        switch(choice){
            case 1->{
-               Animal animal=new Animal();
+               A animal=new A();
                animal.eat();
            }
            case 2->{
-               Mammal mammal=new Mammal();
+               B mammal=new B();
                mammal.walk();
            }
            case 3->{
-               Dog dog=new Dog();
+               C dog=new C();
                dog.bark();
            }
            default ->{
@@ -26,20 +26,20 @@ public class MultilevelInheritance {
    }
 }
 //--------------------------------------------------------------------
-class Animal{
+class A{
    public void eat(){
-       System.out.println("Animal is eating");
+       System.out.println("A is eating");
    }
 }
 //--------------------------------------------------------------------
-class Mammal extends Animal{
+class B extends A{
    public void walk(){
-       System.out.println("Mammal is walking");
+       System.out.println("B is walking");
    }
 }
 //--------------------------------------------------------------------
-class Dog extends Mammal{
+class C extends B{
    public void bark(){
-       System.out.println("Dog is barking");
+       System.out.println("C is barking");
    }
 }
