@@ -1,4 +1,7 @@
 package string_Handling;
+
+import java.util.Scanner;
+
 /*2. Print Duplicate Characters and Their Count
 Easy
 100 points
@@ -29,6 +32,11 @@ Output:
 g → 2
 r → 2
 m → 2*/
-public class PrintDuplicateCharactersAndTheirCount {
 
+
+public class PrintDuplicateCharactersAndTheirCount {
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println();
+	}
 }
