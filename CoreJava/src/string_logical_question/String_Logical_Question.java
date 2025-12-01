@@ -241,7 +241,7 @@ NOTE : If input String is null or empty then return "invalid String
 input". 
 
 -----------------------------------------------------------------------------------------
-
+//Done
 Program : 16 
 Write a program to count the characters, digit, special characters from 
 the given string. 
@@ -258,7 +258,7 @@ NOTE : If input String is null or empty then return "invalid String
 input".
 
  -----------------------------------------------------------------------------------------
-
+//Done
 Program : 17 
 Write a program to find the the percentage of Characters,digits,special 
 characters from the given String. 
@@ -287,7 +287,7 @@ Method name : validParentheses
 Argument : String 
 Return Type : boolean 
 NOTE : If input String is null or empty then return "invalid String 
-input". 
+input".  
 
 -----------------------------------------------------------------------------------------
 
