@@ -53,7 +53,7 @@ java.util.function.Function<T, R> functional interface with either:
 A lambda expression, OR A method reference
 
 Your task is to:
-Create an Emp class with:
+Create an Employee class with:
 int empNo
 String name
 float salary
