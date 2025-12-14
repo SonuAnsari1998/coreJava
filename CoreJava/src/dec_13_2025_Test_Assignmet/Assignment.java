@@ -87,7 +87,7 @@ Your task:
 Accept an integer input N.
 
 Create two predicates:
-Predicate 1: Check if the number is even.
+Predicate 1: Check if the number is even.//
 Predicate 2: Check if the number is greater than 10.
 
 Combine both predicates using the and() method.
