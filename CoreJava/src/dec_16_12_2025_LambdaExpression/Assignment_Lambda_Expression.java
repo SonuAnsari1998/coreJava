@@ -3,7 +3,7 @@ package dec_16_12_2025_LambdaExpression;
 /*Assignment - 01
 ---------------
 Create a Java program that defines a method modifyValue to perform modifications on an 
-integer value using a provided consumer. The program should include three consumers: 
+integer value using a pro+vided consumer. The program should include three consumers: 
 doubleValue, incrementBy, and squareValue, each with different modification operations. 
 Your task is to implement the modifyValue method such that it accepts an integer value 
 and a consumer as parameters, and applies the modification specified by the consumer to
