@@ -59,7 +59,7 @@ public class ClassNotFoundExpDemo {
 		try
 		{
 			Class c=Class.forName(str);
-			IO.println("Class loaded successfully: "+str);
+			IO.println("Class loaded successfully: "+c.getClass());
 		}
 		catch(ClassNotFoundException e)
 		{

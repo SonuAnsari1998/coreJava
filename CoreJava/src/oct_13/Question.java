@@ -14,7 +14,8 @@ Create a method public void setStudentData() with the parameters: id, name, mark
 Note that studentGrade is not set through method because it is a calculated value.
 
 Methods :
-displayDetails(): This method should return a String with  the details of the student in the following format:
+displayDetails(): This method should return a String with  the details of the student in the following 
+format:
 Student [name=John Smith, studentId=123, marks=95, grade=A] 
 
 method : calculateGrade():public:void
@@ -49,4 +50,4 @@ NoOfProject is more than 20 then add 15000 to the salary.
 
 Take a method called public void displayDetails() to display the employee details with updated salary.
 
-Take an ELC class Tester with main method to test your logic.*/
+Take an ELC class Tester1 with main method to test your logic.*/
