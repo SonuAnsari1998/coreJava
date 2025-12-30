@@ -1,4 +1,7 @@
 package dec_27_2025_Test_program_Exception_Handling;
+
+import java.util.Vector;
+
 /*2. CreateDuplicateNumberException
 
 Problem Description
