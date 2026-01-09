@@ -6,6 +6,6 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="lib" path="F:/Batch-51/Back-end/Adv. Java/dbjar/ojdbc11.jar"/>
+	<classpathentry kind="lib" path="F:/ORACAL/db_home/jdbc/lib/ojdbc8.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

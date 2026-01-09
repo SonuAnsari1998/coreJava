@@ -6,7 +6,7 @@ public class CabCustomerServiceTester {
 	void main() {
 		CustomerService service=new CustomerService();
 		try {
-			Customer c1 = new Customer(1, "JOHN", "Ameerpet", "Madhapur", 2, "9876543210");
+			Customer c1 = new Customer(1, "JOHN", "Ameerpet", "Madhapur", 1, "9876543210");
 			service.addCustomer(c1);
 			service.printBill(c1);
 			Customer c2 = new Customer(1, "Smith", "S.R Nagar", "Ammerpt", 6, "9876543210");

@@ -26,7 +26,7 @@ public class CustomerService {
 	public double calculateBill(Customer customer) {
 		double bill = 0.0;
 		if (isFirstCustomer(customer)) {
-			bill = 0;
+			bill = 0.0;
 		}
 		for (Customer c : customers) {
 			if (c.distance() <= 4) {
