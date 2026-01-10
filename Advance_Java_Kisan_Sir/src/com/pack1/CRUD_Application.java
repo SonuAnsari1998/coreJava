@@ -18,7 +18,6 @@ public class CRUD_Application {
 		}
 		return conn;
 	}
-//---------end----------------------
 
 //-------------Display Data--s--------
 	public void getData(String getDetails) {
