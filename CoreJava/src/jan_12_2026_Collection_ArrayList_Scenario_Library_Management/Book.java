@@ -45,6 +45,5 @@ public class Book {
 	}
 	public String toString() {
 		return "(title = "+this.title+", author = "+this.author+", isbn = "+this.isbn+", price = "+this.price+", quantity = "+this.quantity+")\n";
-	}
-    
+	}  
 }

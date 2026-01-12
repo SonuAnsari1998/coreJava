@@ -134,8 +134,7 @@ Choose an option:
 Test Case 4 :
 -------------
 Choose an option: 4
-Enter Book Title :
-Advanced Java
+Enter Book Title : Advanced Java
 Advanced Java book has removed successfully...
 1. Add Book
 2. Display Books

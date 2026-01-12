@@ -113,8 +113,8 @@ public class CRUD_Application {
 			int choice = Integer.parseInt(IO.readln("Enter Your Choice"));
 			switch (choice) {
 			case 1 -> {
-				String view=IO.readln("Enter Table Name");
-				String viewQuery = "select * from "+view;
+				String view = IO.readln("Enter Table Name");
+				String viewQuery = "select * from " + view;
 				System.out.println("\n---------------Employee Table---------------------------");
 				crud.getData(viewQuery);
 			}
@@ -135,6 +135,7 @@ public class CRUD_Application {
 			}
 			case 4 -> {
 				int id = Integer.parseInt(IO.readln("Enter Employee Id"));
+				
 				double salary = Double.parseDouble(IO.readln("Enter New Salary"));
 				String updateQuery = "update Employee set esal=" + salary + "where eid=" + id;
 				crud.updateSalary(updateQuery);

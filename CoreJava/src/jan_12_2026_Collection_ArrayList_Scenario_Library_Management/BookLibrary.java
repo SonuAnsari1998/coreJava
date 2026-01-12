@@ -17,12 +17,22 @@ public class BookLibrary {
 				long isbn = Long.parseLong(IO.readln("Enter ISBN:"));
 				double price = Double.parseDouble(IO.readln("Enter Price:"));
 				int quantity = Integer.parseInt(IO.readln("Enter Quantity:"));
-				 Book book = new Book(title, author, isbn, price, quantity);
+				Book book = new Book(title, author, isbn, price, quantity);
 				library.addBook(book);
 			}
-			case 2->{
-				
+			case 2 -> {
 				library.displayAllBooks();
+			}
+			case 3 -> {
+				long isbn = Long.parseLong(IO.readln("Enter ISBN:"));
+				library.updateBookQuantityByISBN(isbn);
+			}
+			case 4 -> {
+				String title = IO.readln("Enter Title:");
+				library.deleteBookByTitle(title);
+			}
+			case 5 -> {
+				System.exit(0);
 			}
 
 			default -> System.err.println("Invalid Choice.......");
