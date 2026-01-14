@@ -174,7 +174,7 @@ public class hotel_Reservation_System {
 		System.out.println();
 		System.out.println("ThankYou For Using Hotel Reservation System!!!");
 	}
-
+//--------main Method----------
 	public static void main(String[] args) {
 		hotel_Reservation_System hotel = new hotel_Reservation_System();
 		while (true) {
