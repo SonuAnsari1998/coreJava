@@ -55,10 +55,46 @@ public class ConnTest {
 		}
 		
 	}
+	public void deleteData() {
+		try {
+			int empId=Integer.parseInt(IO.readln("Enter Employee id"));
+			
+			Connection conn=connect();
+			Statement stm= conn.createStatement();
+			int row= stm.executeUpdate("delete from Employee where id="+empId+"");
+			
+			if(row>0) {
+				IO.println("Data Deleted Sucessfully............");
+			}else {
+				System.err.println("Data not deleted");
+			}
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
 	public static void main(String[] args) {
 		ConnTest conn=new ConnTest();
-		conn.connect();
-		conn.getDetails();
-		conn.insertData();
+		while(true) {
+			IO.println("1) Show table");
+			IO.println("2) Insert data");
+			IO.println("3) Delete Data Using Employee id");
+			IO.println("4) Update Employee Data using employee id");
+			IO.println("5) Exit");
+			int choice=Integer.parseInt(IO.readln("Enter your choice.."));
+			switch(choice) {
+			case 1->{
+				conn.getDetails();
+			}
+			case 2->{
+				conn.insertData();
+			}
+			case 3->{
+				conn.deleteData();
+				
+			}
+			default -> System.err.println("Invalid choice");
+			};
+		}
 	}
 }
