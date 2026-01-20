@@ -42,22 +42,21 @@ public class ShoppingCart {
 			e.printStackTrace();
 		}
 	}
-
-//	public void addProduct(Product product) {
-//		productList.add(product);
-//	}
-//	public void removeProduct(int id) {
-//		ListIterator<Product> list=productList.listIterator();
-//		while(list.hasNext()) {
-//			Product p=list.next();
-//			if(p.getProductId()==id) {
-//				list.remove();
-//				IO.println("Product id "+id+" Deleted Successfullu.........");
-//			}else {
-//				IO.println(id+" is not available");
-//			}
-//		}
-//	}
+	public void removeProduct(int id) {
+		Connection conn=connect();
+		try {
+			Statement stm =conn.createStatement();
+			int rowCont = stm.executeUpdate("delete from ShoppingCart where PRODUCTID="+id);
+			if(rowCont>0) {
+				IO.println(id+" Product Deleted Sucessfully..........");
+			}else {
+				IO.println(id+" Not Found");
+			}
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
 //	public void updateQuantity(int id,int productQuantuty) {
 //		ListIterator<Product> list=productList.listIterator();
 //		boolean isFound=false;

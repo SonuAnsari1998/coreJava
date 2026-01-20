@@ -28,12 +28,12 @@ public class ProductMain {
 				}
 				case 2 -> {
 					int id = Integer.parseInt(IO.readln("Enter Poduct Id "));
-					//.removeProduct(id);
+					shoping.removeProduct(id);
 				}
 				case 3 -> {
 					int id = Integer.parseInt(IO.readln("Enter Poduct Id "));
 					int Updateqty = Integer.parseInt(IO.readln("Enter Update Quantity.."));
-					//shoping.updateQuantity(id, Updateqty);
+					shoping.updateQuantity(id, Updateqty);
 
 				}
 				case 4 -> {
