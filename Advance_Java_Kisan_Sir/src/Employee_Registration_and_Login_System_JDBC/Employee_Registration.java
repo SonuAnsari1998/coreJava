@@ -30,12 +30,14 @@ public class Employee_Registration {
 					"select FNAME , LNAME, MID, ADDR, PHN from EmployeeRegistration where ENAME = ? OR PWORD = ?");
 			PreparedStatement prep3 = conn
 					.prepareStatement("update EmployeeRegistration set ADDR=?, PHN=? where ENAME=?");
+			PreparedStatement prep4 = conn.prepareStatement("update EmployeeRegistration set PWORD=? where ENAME=?");
 
 			IO.println("------------Employee Registration------------");
 			while (true) {
 				IO.println("1. New Registration");
 				IO.println("2. Employee Login");
 				IO.println("3. Update Profile");
+				IO.println("4. Forgate Password");
 				IO.print("");
 				int choice = Integer.parseInt(IO.readln("Enter your choice"));
 				switch (choice) {
@@ -89,6 +91,20 @@ public class Employee_Registration {
 						IO.println("Registration Details Updated Sucessfully..............\n");
 					} else {
 						System.err.println(ename + " Not Found! Please Enter Valid username..");
+					}
+
+				}
+				case 4 -> {
+					IO.println("Forgate Password");
+					String ename = IO.readln("Enter User Name");
+					String password = IO.readln("Enter New Password");
+					prep4.setString(1, password);
+					prep4.setString(2, ename);
+					int rowCount = prep4.executeUpdate();
+					if (rowCount > 0) {
+						IO.println("Password Updated Sucessfully...........");
+					} else {
+						System.err.println("Invalid User Name Please Enter valid user name");
 					}
 
 				}
