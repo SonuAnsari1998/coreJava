@@ -18,6 +18,7 @@ public class ProductMain {
 				int choice = Integer.parseInt(IO.readln("Enter Your choice....\n"));
 				switch (choice) {
 				case 1 -> {
+					
 					int noOfProduct = Integer.parseInt(IO.readln("Enter No. of Product"));
 					for (int i = 1; i <= noOfProduct; i++) {
 						int id = Integer.parseInt(IO.readln("Enter Poduct Id (" + i + ")"));
