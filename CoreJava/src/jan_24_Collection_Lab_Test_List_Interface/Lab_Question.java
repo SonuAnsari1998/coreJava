@@ -22,12 +22,10 @@ Value of key 102 is: Python
 
 =======================================================
 2. FindingMiddleElementInALinkedList
-Easy
-100 points
-• 130 min suggested
-Problem Description
-Scenario:
-A retail company maintains its product catalog using a linked list data structure. The management needs a system to quickly identify the "middle product" in their catalog for various business operations such as:
+
+A retail company maintains its product catalog using a linked list data structure. 
+The management needs a system to quickly identify the "middle product" in their catalog 
+for various business operations such as:
 
 Inventory balancing - Middle product helps in stock distribution planning
 
