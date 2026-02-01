@@ -18,7 +18,7 @@ public class FindMinimusSalaryEmployees {
 		int min = Collections.min(employeeList.values());
 		for (Map.Entry<String, Integer> entry : employeeList.entrySet()) {
 			if (entry.getValue() == min) {
-				System.out.println("Minimus Salary Employee: " + entry.getKey() + " " + entry.getValue());
+				System.out.println("Min Salary: " + entry.getValue());
 			}
 		}
 	}

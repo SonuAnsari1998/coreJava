@@ -13,7 +13,7 @@ public class FindMaximumSalaryEmployees {
 		empList.put("sonu", 152200);
 		empList.put("Rahul", 182200);
 		empList.put("Ravi", 692200);
-		empList.put("Vijay", 142200);
+		empList.put("rahul", 142200);
 
 		int max = Collections.max(empList.values());
 		for (Map.Entry<String, Integer> entry : empList.entrySet()) {
