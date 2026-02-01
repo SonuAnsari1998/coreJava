@@ -68,8 +68,14 @@ public class Employee_Register_And_Login_Process {
 					ResultSet rst = prt2.executeQuery();
 					while (rst.next()) {
 						PreparedStatement prt3 = conn.prepareStatement("SELECT * FROM EMPLOYEEINFO");
-						PreparedStatement prt4 = conn.prepareStatement(
-								"UPDATE  EMPLOYEEINFO SET MAILID=?, PHNO=? where eid=?");
+						PreparedStatement prt4 = conn
+								.prepareStatement("UPDATE  EMPLOYEEINFO SET MAILID=?, PHNO=? where eid=?");
+						PreparedStatement prt5 = conn
+								.prepareStatement("DELETE FROM EMPLOYEEINFO WHERE ESAL BETWEEN ? AND ?");
+						PreparedStatement prt6 = conn
+								.prepareStatement("DELETE FROM EMPLOYEEINFO WHERE ESAL BETWEEN ? AND ?");
+						PreparedStatement prt7 = conn
+								.prepareStatement("UPDATE EMPLOYEEINFO  SET esal = esal * 1.10");
 
 						IO.println("\nLogin Successfully........");
 						IO.println("Welcome " + rst.getString(1));
@@ -98,13 +104,32 @@ public class Employee_Register_And_Login_Process {
 								prt4.setString(1, email);
 								prt4.setLong(2, phone);
 								prt4.setInt(3, id);
-								int rowCount =prt4.executeUpdate();
-								if(rowCount>0) {
-									System.out.println(eid+" Data Updated sucessfully.......");
-								}else {
-									System.err.println(eid+ " Not Found..");
+								int rowCount = prt4.executeUpdate();
+								if (rowCount > 0) {
+									System.out.println(eid + " Data Updated sucessfully.......");
+								} else {
+									System.err.println(eid + " Not Found..");
 								}
 
+							}
+							case 3 -> {
+								double esal1 = Double.parseDouble(IO.readln("Enter Salary Range Start"));
+								double esal2 = Double.parseDouble(IO.readln("Enter Salary Range End"));
+								prt5.setDouble(1, esal1);
+								prt5.setDouble(2, esal2);
+								int rowCount = prt5.executeUpdate();
+								if (rowCount > 0) {
+									System.out.println(esal1 + " to " + esal2 + " Deleted Sucessfully.....");
+								} else {
+									System.err.println(esal1 + " to " + esal2 + " Range Salary Not Found...");
+								}
+
+							}
+							case 4->{
+								int rowCount = prt7.executeUpdate();
+								if(rowCount>0) {
+									System.out.println("10% Salary Added Sucessfully...");
+								}
 							}
 
 							default -> System.err.println("Invalid choice.. ");
