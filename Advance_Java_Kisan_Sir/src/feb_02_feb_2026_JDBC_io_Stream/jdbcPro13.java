@@ -1,4 +1,4 @@
-package feb_02_feb_2026_io_Stream;
+package feb_02_feb_2026_JDBC_io_Stream;
 
 import java.io.BufferedReader;
 import java.io.FileReader;

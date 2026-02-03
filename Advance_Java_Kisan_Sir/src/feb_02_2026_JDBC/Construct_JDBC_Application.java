@@ -13,6 +13,7 @@ import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.sql.Types;
 
 public class Construct_JDBC_Application {
 	String url = "jdbc:oracle:thin:@localhost:1521:orcl";
@@ -66,8 +67,45 @@ public class Construct_JDBC_Application {
 		}
 	}
 
+	
+	public void retriveData() {
+		Connection conn = connect();
+		try {
+			CallableStatement cstmt = conn.prepareCall("{call retrieveData(?,?,?,?,?,?,?,?,?)}");
+			System.out.println("Enter Employee Id");
+			String id= IO.readln();
+			cstmt.setString(1, id);
+			
+			cstmt.registerOutParameter(2, Types.VARCHAR);
+			cstmt.registerOutParameter(3, Types.VARCHAR);
+			cstmt.registerOutParameter(4, Types.VARCHAR);
+			cstmt.registerOutParameter(5, Types.VARCHAR);
+			cstmt.registerOutParameter(6, Types.VARCHAR);
+			cstmt.registerOutParameter(7, Types.NUMERIC);
+			cstmt.registerOutParameter(8, Types.VARCHAR);
+			cstmt.registerOutParameter(9, Types.NUMERIC);
+			
+			
+			cstmt.execute();
+			IO.println("Employee Details");
+			IO.println("Student id: "+id);
+			IO.println("Student Roll No.: "+cstmt.getString(2));
+			IO.println("Student Name"+cstmt.getString(3));
+			IO.println("Student Branch: "+cstmt.getString(4));
+			IO.println("Student House No. : "+cstmt.getString(5));
+			IO.println("Student City: "+cstmt.getString(6));
+			IO.println("Student Pin code: "+cstmt.getString(7));
+			IO.println("Student mail id: "+cstmt.getString(8));
+			IO.println("Student Phone No.: "+cstmt.getString(9));
+			
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
 	public static void main(String[] args) {
 		Construct_JDBC_Application student = new Construct_JDBC_Application();
-		student.insertData();
+		//student.insertData();
+		student.retriveData();
 	}
 }
