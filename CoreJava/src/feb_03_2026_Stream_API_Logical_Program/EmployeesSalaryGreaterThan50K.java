@@ -1,4 +1,4 @@
-package stream_API_Logical_Program;
+package feb_03_2026_Stream_API_Logical_Program;
 
 import java.util.Arrays;
 import java.util.List;

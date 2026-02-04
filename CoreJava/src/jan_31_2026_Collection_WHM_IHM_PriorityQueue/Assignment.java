@@ -1,4 +1,4 @@
-package feb_03_2026_Collection_WHM_IHM_PriorityQueue;
+package jan_31_2026_Collection_WHM_IHM_PriorityQueue;
 
 /*Assignment 01 :
 --------------

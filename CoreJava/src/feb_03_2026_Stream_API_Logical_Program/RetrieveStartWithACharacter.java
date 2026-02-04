@@ -1,4 +1,4 @@
-package stream_API_Logical_Program;
+package feb_03_2026_Stream_API_Logical_Program;
 /*2) Retrieve all the names which starts from character A using Stream API and Convert the 
 Stream to Set interface.*/
 
