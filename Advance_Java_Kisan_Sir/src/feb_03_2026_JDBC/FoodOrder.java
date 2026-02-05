@@ -38,6 +38,8 @@ public class FoodOrder {
 				IO.println(rst1.getInt(1)+"\t\t"+rst1.getString(2)+"\t\t\t"+rst1.getDouble(3));
 			}
 			System.out.println("\nPlease Order the food...........");
+			
+			int oId=Integer.parseInt(IO.readln("Etner Order id"));
 			int fodId=Integer.parseInt(IO.readln("Etner food id"));
 			int qty=Integer.parseInt(IO.readln("Enter food qty"));
 			prep2.setInt(1, qty);
@@ -46,10 +48,10 @@ public class FoodOrder {
 			while(executeQuery.next()) {
 				IO.println("Total Price: "+executeQuery.getInt(1));
 			
-				PreparedStatement prep3 = conn.prepareStatement("insert into order1 values("+4+", "+fodId+", "+qty+", "+executeQuery.getInt(1)+")");
+				PreparedStatement prep3 = conn.prepareStatement("insert into order1 values("+oId+", "+fodId+", "+qty+", "+executeQuery.getInt(1)+")");
 				int rowCount= prep3.executeUpdate();
 				if(rowCount>0) {
-					System.out.println("Order id :"+fodId);
+					System.out.println("Order id :"+oId);
 					System.out.println("Food id: "+fodId);
 					System.out.println("Queantity: "+qty);
 					System.out.println("Ordered sucessfully");
